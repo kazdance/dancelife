@@ -3,14 +3,615 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>KAZ DANCELIFE</title>
+  <meta name="description" content="KAZ DANCELIFE - Dance. Live. Enjoy.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans JP",
+        sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ====================
+       HEADER
+    ==================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 11, 11, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* ====================
+       HERO
+    ==================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 60px;
+      background:
+        radial-gradient(circle at center, #252525 0%, #0b0b0b 60%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-small {
+      font-size: 13px;
+      letter-spacing: 5px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 12vw, 100px);
+      line-height: 1;
+      letter-spacing: 4px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero-title {
+      margin-top: 25px;
+      font-size: clamp(18px, 4vw, 28px);
+      letter-spacing: 5px;
+      font-weight: 600;
+    }
+
+    .hero-jp {
+      margin-top: 12px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 13px 30px;
+      border: 1px solid #fff;
+      border-radius: 30px;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .hero-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* ====================
+       COMMON
+    ==================== */
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 35px;
+      letter-spacing: 2px;
+    }
+
+    /* ====================
+       PROFILE
+    ==================== */
+
+    .profile {
+      background: #111;
+    }
+
+    .profile-box {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .profile-icon {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #333, #111);
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+
+    .profile-text h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .profile-text p {
+      color: #bbb;
+    }
+
+    /* ====================
+       CONTENT CARDS
+    ==================== */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 220px;
+      padding: 28px;
+      background: #151515;
+      border: 1px solid #252525;
+      border-radius: 12px;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #555;
+    }
+
+    .card-icon {
+      font-size: 38px;
+      margin-bottom: auto;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* ====================
+       LIFE
+    ==================== */
+
+    .life {
+      background: #111;
+    }
+
+    .life-text {
+      max-width: 700px;
+      color: #bbb;
+      font-size: 16px;
+    }
+
+    .life-text strong {
+      color: #fff;
+    }
+
+    /* ====================
+       MESSAGE
+    ==================== */
+
+    .message {
+      text-align: center;
+      padding: 110px 20px;
+    }
+
+    .message h2 {
+      font-size: clamp(28px, 7vw, 50px);
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .message p {
+      color: #999;
+    }
+
+    /* ====================
+       FOOTER
+    ==================== */
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 30px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .footer-logo {
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    /* ====================
+       MOBILE
+    ==================== */
+
+    @media (max-width: 700px) {
+
+      .header-inner {
+        padding: 12px 15px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      nav {
+        gap: 12px;
+        font-size: 10px;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero h1 {
+        letter-spacing: 2px;
+      }
+
+      .hero-title {
+        letter-spacing: 3px;
+      }
+
+      section {
+        padding: 70px 18px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .profile-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .profile-icon {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        font-size: 45px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: 180px;
+      }
+
+      .message {
+        padding: 90px 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>KAZ DANCELIFE</h1>
-  <p>Dance. Live. Enjoy.</p>
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
 
-  <p>踊って、遊んで、人生を楽しむ。</p>
+      <a href="#" class="logo">KAZ DANCELIFE</a>
+
+      <nav>
+        <a href="#profile">PROFILE</a>
+        <a href="#dance">DANCE</a>
+        <a href="#life">LIFE</a>
+        <a href="#blog">BLOG</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-small">
+        WELCOME TO MY LIFE
+      </div>
+
+      <h1>
+        KAZ
+        <span>DANCELIFE</span>
+      </h1>
+
+      <div class="hero-title">
+        Dance. Live. Enjoy.
+      </div>
+
+      <div class="hero-jp">
+        踊って、遊んで、人生を楽しむ。
+      </div>
+
+      <a href="#profile" class="hero-button">
+        ABOUT KAZ ↓
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROFILE -->
+  <section id="profile" class="profile">
+
+    <div class="container">
+
+      <div class="section-label">
+        PROFILE
+      </div>
+
+      <h2 class="section-title">
+        KAZについて
+      </h2>
+
+      <div class="profile-box">
+
+        <div class="profile-icon">
+          K
+        </div>
+
+        <div class="profile-text">
+
+          <h3>カズ / KAZ</h3>
+
+          <p>
+            ダンスが好き。<br>
+            音楽が好き。<br>
+            そして、楽しいことが好き。
+          </p>
+
+          <br>
+
+          <p>
+            このサイトは、ダンスを中心に<br>
+            趣味や遊び、日々の出来事などを<br>
+            気ままに残していく個人サイトです。
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DANCE -->
+  <section id="dance">
+
+    <div class="container">
+
+      <div class="section-label">
+        DANCE
+      </div>
+
+      <h2 class="section-title">
+        DANCE LIFE
+      </h2>
+
+      <div class="cards">
+
+        <a href="#" class="card">
+          <div class="card-icon">🕺</div>
+          <h3>DANCE</h3>
+          <p>ダンスについて</p>
+        </a>
+
+        <a href="#" class="card">
+          <div class="card-icon">🎬</div>
+          <h3>MOVIE</h3>
+          <p>ダンス動画</p>
+        </a>
+
+        <a href="#" class="card">
+          <div class="card-icon">📸</div>
+          <h3>PHOTO</h3>
+          <p>写真ギャラリー</p>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LIFE -->
+  <section id="life" class="life">
+
+    <div class="container">
+
+      <div class="section-label">
+        LIFE
+      </div>
+
+      <h2 class="section-title">
+        ENJOY LIFE
+      </h2>
+
+      <div class="life-text">
+
+        <p>
+          <strong>人生は一度きり。</strong>
+        </p>
+
+        <br>
+
+        <p>
+          ダンスを楽しむ。<br>
+          音楽を楽しむ。<br>
+          仲間と遊ぶ。<br>
+          行きたい場所へ行く。
+        </p>
+
+        <br>
+
+        <p>
+          そんな「楽しい」を大切にして、<br>
+          これからの人生を思いっきり楽しむ。
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BLOG -->
+  <section id="blog">
+
+    <div class="container">
+
+      <div class="section-label">
+        BLOG
+      </div>
+
+      <h2 class="section-title">
+        KAZ BLOG
+      </h2>
+
+      <div class="cards">
+
+        <a href="#" class="card">
+          <div class="card-icon">📝</div>
+          <h3>DIARY</h3>
+          <p>日々の出来事</p>
+        </a>
+
+        <a href="#" class="card">
+          <div class="card-icon">🎵</div>
+          <h3>MUSIC</h3>
+          <p>好きな音楽</p>
+        </a>
+
+        <a href="#" class="card">
+          <div class="card-icon">🌴</div>
+          <h3>TRAVEL</h3>
+          <p>旅行・遊び</p>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MESSAGE -->
+  <section class="message">
+
+    <h2>
+      Dance.<br>
+      Live.<br>
+      Enjoy.
+    </h2>
+
+    <p>
+      Let's enjoy the rest of our lives.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      KAZ DANCELIFE
+    </div>
+
+    © 2026 KAZ DANCELIFE
+
+  </footer>
+
 
 </body>
 </html>
