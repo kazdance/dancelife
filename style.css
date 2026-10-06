@@ -465,3 +465,140 @@ footer {
   }
 
 }
+
+/* ====================
+   DANCE SCHEDULE
+==================== */
+
+.schedule {
+  background: #0b0b0b;
+}
+
+.schedule-list {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+
+  background: #151515;
+
+  border: 1px solid #252525;
+  border-radius: 12px;
+
+  margin-bottom: 15px;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+.schedule-item:hover {
+  transform: translateY(-3px);
+  border-color: #555;
+}
+
+
+/* DATE */
+
+.schedule-date {
+  width: 120px;
+  min-width: 120px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #191919;
+
+  border-right: 1px solid #292929;
+}
+
+.schedule-date .month {
+  display: block;
+
+  font-size: 12px;
+  letter-spacing: 3px;
+
+  color: #888;
+}
+
+.schedule-date .day {
+  display: block;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+.schedule-date .year {
+  display: block;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+
+/* INFO */
+
+.schedule-info {
+  padding: 20px 25px;
+}
+
+.schedule-time {
+  font-size: 13px;
+
+  color: #aaa;
+
+  margin-bottom: 5px;
+}
+
+.schedule-info h3 {
+  font-size: 21px;
+
+  margin-bottom: 3px;
+}
+
+.schedule-info p {
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .schedule-item {
+    align-items: stretch;
+  }
+
+  .schedule-date {
+    width: 90px;
+    min-width: 90px;
+
+    padding: 15px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .schedule-date .day {
+    font-size: 34px;
+  }
+
+  .schedule-info {
+    padding: 15px;
+  }
+
+  .schedule-info h3 {
+    font-size: 18px;
+  }
+
+}
