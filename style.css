@@ -113,6 +113,7 @@ nav a:hover {
   font-size: 13px;
   letter-spacing: 5px;
   color: #aaa;
+
   margin-bottom: 20px;
 }
 
@@ -180,6 +181,7 @@ section {
 .section-label {
   font-size: 11px;
   letter-spacing: 4px;
+
   color: #888;
 
   margin-bottom: 8px;
@@ -256,6 +258,115 @@ section {
 
 
 /* ====================
+   DANCE SCHEDULE
+==================== */
+
+.schedule {
+  background: #0b0b0b;
+}
+
+.schedule-list {
+  max-width: 750px;
+
+  margin: 0 auto;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+
+  background: #151515;
+
+  border: 1px solid #252525;
+
+  border-radius: 12px;
+
+  margin-bottom: 15px;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+.schedule-item:hover {
+  transform: translateY(-3px);
+
+  border-color: #555;
+}
+
+
+/* DATE */
+
+.schedule-date {
+  width: 120px;
+  min-width: 120px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #191919;
+
+  border-right: 1px solid #292929;
+}
+
+.schedule-date .month {
+  display: block;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  color: #888;
+}
+
+.schedule-date .day {
+  display: block;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+.schedule-date .year {
+  display: block;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+
+/* SCHEDULE INFO */
+
+.schedule-info {
+  padding: 20px 25px;
+}
+
+.schedule-time {
+  font-size: 13px;
+
+  color: #aaa;
+
+  margin-bottom: 5px;
+}
+
+.schedule-info h3 {
+  font-size: 21px;
+
+  margin-bottom: 3px;
+}
+
+.schedule-info p {
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+/* ====================
    CARDS
 ==================== */
 
@@ -282,7 +393,9 @@ section {
   transition: 0.3s;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: flex-end;
 }
 
@@ -308,6 +421,17 @@ section {
   color: #999;
 
   font-size: 13px;
+}
+
+
+/* ====================
+   INSTAGRAM VIDEO
+==================== */
+
+.dance-video {
+  max-width: 540px;
+
+  margin: 0 auto 40px;
 }
 
 
@@ -409,6 +533,9 @@ footer {
 
   .hero {
     min-height: 90vh;
+
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .hero h1 {
@@ -447,132 +574,7 @@ footer {
   }
 
 
-  /* CARDS */
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: 180px;
-  }
-
-
-  /* MESSAGE */
-
-  .message {
-    padding: 90px 20px;
-  }
-
-}
-
-/* ====================
-   DANCE SCHEDULE
-==================== */
-
-.schedule {
-  background: #0b0b0b;
-}
-
-.schedule-list {
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-.schedule-item {
-  display: flex;
-  align-items: center;
-
-  background: #151515;
-
-  border: 1px solid #252525;
-  border-radius: 12px;
-
-  margin-bottom: 15px;
-
-  overflow: hidden;
-
-  transition: 0.3s;
-}
-
-.schedule-item:hover {
-  transform: translateY(-3px);
-  border-color: #555;
-}
-
-
-/* DATE */
-
-.schedule-date {
-  width: 120px;
-  min-width: 120px;
-
-  padding: 20px;
-
-  text-align: center;
-
-  background: #191919;
-
-  border-right: 1px solid #292929;
-}
-
-.schedule-date .month {
-  display: block;
-
-  font-size: 12px;
-  letter-spacing: 3px;
-
-  color: #888;
-}
-
-.schedule-date .day {
-  display: block;
-
-  font-size: 42px;
-  font-weight: 800;
-
-  line-height: 1.1;
-}
-
-.schedule-date .year {
-  display: block;
-
-  font-size: 11px;
-
-  color: #777;
-}
-
-
-/* INFO */
-
-.schedule-info {
-  padding: 20px 25px;
-}
-
-.schedule-time {
-  font-size: 13px;
-
-  color: #aaa;
-
-  margin-bottom: 5px;
-}
-
-.schedule-info h3 {
-  font-size: 21px;
-
-  margin-bottom: 3px;
-}
-
-.schedule-info p {
-  color: #888;
-
-  font-size: 13px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
+  /* SCHEDULE */
 
   .schedule-item {
     align-items: stretch;
@@ -585,7 +587,9 @@ footer {
     padding: 15px 10px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
   }
 
@@ -597,8 +601,38 @@ footer {
     padding: 15px;
   }
 
+  .schedule-time {
+    font-size: 12px;
+  }
+
   .schedule-info h3 {
     font-size: 18px;
+  }
+
+
+  /* CARDS */
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 180px;
+  }
+
+
+  /* INSTAGRAM */
+
+  .dance-video {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+
+  /* MESSAGE */
+
+  .message {
+    padding: 90px 20px;
   }
 
 }
