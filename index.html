@@ -9,21 +9,18 @@
   <style>
     .notes { background:#101010; padding:80px 20px; }
     .notes-inner { max-width:1000px; margin:0 auto; }
-    .notes-intro { color:#aaa; margin:-18px 0 32px; }
+    .notes-intro { color:#aaa; margin:-18px 0 32px; line-height:1.9; }
     .category-nav { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 46px; }
     .category-nav a { border:1px solid #444; border-radius:30px; padding:8px 15px; color:#ccc; font-size:13px; transition:.2s; }
     .category-nav a:hover { background:#fff; color:#111; }
-    .note-category { margin:0 0 58px; scroll-margin-top:90px; }
-    .category-heading { font-size:23px; margin:0 0 22px; padding-bottom:12px; border-bottom:1px solid #333; }
+    .note-category { margin:0 0 52px; scroll-margin-top:90px; }
+    .category-heading { font-size:23px; margin:0 0 20px; padding-bottom:12px; border-bottom:1px solid #333; }
     .category-heading span { color:#777; font-size:11px; letter-spacing:3px; display:block; margin-bottom:5px; }
-    .note-card { background:#171717; border:1px solid #292929; border-radius:13px; padding:26px 28px; margin-bottom:16px; }
-    .note-meta { color:#888; font-size:11px; letter-spacing:2px; margin-bottom:9px; }
-    .note-card h3 { font-size:clamp(20px,3vw,26px); line-height:1.5; margin:0 0 18px; }
-    .note-card p { color:#bbb; line-height:2; margin:0 0 14px; }
+    .note-card { background:#171717; border:1px solid #292929; border-radius:13px; padding:26px 28px; }
+    .note-card h3 { font-size:clamp(20px,3vw,26px); line-height:1.5; margin:0 0 16px; }
+    .note-card p { color:#bbb; line-height:2; margin:0 0 13px; }
     .note-card p:last-child { margin-bottom:0; }
-    .note-highlight { color:#fff !important; border-left:2px solid #777; padding:7px 0 7px 16px; margin-top:20px !important; }
-    .method-list { color:#bbb; line-height:2; padding-left:1.3em; margin:12px 0 18px; }
-    .method-list li { padding-left:4px; margin-bottom:5px; }
+    .note-highlight { color:#fff !important; border-left:2px solid #777; padding:7px 0 7px 16px; margin-top:18px !important; }
     @media(max-width:600px) {
       .notes { padding:65px 18px; }
       .note-card { padding:21px 19px; }
@@ -54,99 +51,60 @@
     <div class="notes-inner">
       <div class="section-label">THOUGHTS &amp; DISCOVERIES</div>
       <h2 class="section-title">DANCE LIFE NOTES</h2>
-      <p class="notes-intro">ダンスのこと、人とのつながり、日々の気づき。思ったことをカテゴリー別に。</p>
+      <p class="notes-intro">これまでの気づきを、4つのテーマにまとめました。</p>
 
       <nav class="category-nav" aria-label="ノートのカテゴリー">
-        <a href="#dance">ダンスの気づき</a>
-        <a href="#connection">人とのつながり</a>
-        <a href="#freedom">ダンスと自由</a>
-        <a href="#method">レッスンの仕組み</a>
-        <a href="#motivation">踊るモチベーション</a>
-        <a href="#zumba">ダンスとの距離感</a>
+        <a href="#growth">上達と発見</a>
+        <a href="#freedom">ダンスの自由</a>
+        <a href="#people">人とのつながり</a>
+        <a href="#style">自分に合う場所</a>
       </nav>
 
-      <section class="note-category" id="dance">
-        <h2 class="category-heading"><span>01 / DANCE DISCOVERIES</span>ダンスの気づき</h2>
+      <section class="note-category" id="growth">
+        <h2 class="category-heading"><span>01 / LEARNING &amp; GROWTH</span>上達と発見</h2>
         <article class="note-card">
-          <div class="note-meta">2026.10.17 · RITMOS / MEGA DANZ</div>
-          <h3>先生を見すぎず、自分の記憶で踊ってみる。</h3>
-          <p>リトモスやメガダンスのレッスンでは、これまでずっと先生の動きを見ながら踊っていた。今日はちょっと試しに、先生のほうをあまり見ず、振り付けを思い出しながら踊ってみた。</p>
-          <p>すると、いつもより振り付けをよく覚えられたような感覚があった。先生の動きを目で追うことから少し離れて、自分の頭の中にある振りを思い出すことに集中できたのかもしれない。</p>
-          <p class="note-highlight">いつも先生を見るだけでなく、ときには自分の記憶を頼りに踊ってみる。振り付けを覚えるための、新しい小さな発見。</p>
-        </article>
-      </section>
-
-      <section class="note-category" id="motivation">
-        <h2 class="category-heading"><span>05 / DANCE MOTIVATION</span>踊るモチベーション</h2>
-        <article class="note-card">
-          <div class="note-meta">2026.10.17 · GYM LIFE</div>
-          <h3>「先生をやっているんですか？」と言われた日。</h3>
-          <p>今日もジムで、一度も話したことのない人から「ダンスの先生とかやってるんですか？めちゃくちゃ上手だから」と声をかけてもらった。もう、めちゃくちゃ有難いし嬉しい。</p>
-          <p>別にダンスでこれといった目標があったわけではない。ジムに入会したのは、有り余る時間を何かで埋めたいということと、新しい人と出会ったり会話したりして、自分が抱えている寂しさを埋めたいという気持ちが大きかった。</p>
-          <p>でも、ちょっと熱を入れてダンスを頑張ってみようかなと思い始めている。</p>
-          <p>ジムのダンスの先生の中には、とびきりすごい人がいる。驚くような可動域、キレキレの動き、息も上がらず、指導もしながら本気で踊っているのに振り付けを一切間違えない。その能力の高さに感動する場面がちらほらある。</p>
-          <p>自分は振りを覚えていても、本気で踊ると間違える。踊れているつもりでも、鏡を見るとダサい。踊り方が好きな先生と自分との差分を感じながら、その差を少しずつ埋めていく。そんな作業を続けていけば、ジム通いにももっと熱が入りそうだ。</p>
-          <p class="note-highlight">誰かに褒めてもらえた嬉しさをきっかけに、憧れる先生との距離を少しずつ縮めるように踊ってみる。新しい目標が、自然と見えてきた。</p>
-        </article>
-      </section>
-
-      <section class="note-category" id="connection">
-        <h2 class="category-heading"><span>02 / HUMAN CONNECTION</span>人とのつながり</h2>
-        <article class="note-card">
-          <div class="note-meta">2026.10.17 · GYM LIFE</div>
-          <h3>名前を尋ねるということ。</h3>
-          <p>今まで自分から誰かに名前を尋ねることが一切なかった。名前はその人の本質ではなく、記号というか、いわば「00185」のような、ただの番号にすぎないと思っていたから。</p>
-          <p>ジムに通い始めて1ヶ月。色んな場面で何度も名前を尋ねられ、少し困惑した。でも、これは多少なりとも自分という人間に興味を持ってくれて、会話をしたり、距離感を測ったり、関わり方を考えたいと思ってくれた証拠なのかなと思い、少し嬉しくなった。</p>
-          <p>まったく興味が持てず、ただそこにいるだけの風景のような存在に対して、名前を知りたいと思うことなんてないだろうし。</p>
-          <p class="note-highlight">名前そのものは記号でも、その名前を知ろうとする行為には、人とつながろうとする気持ちが表れているのかもしれない。</p>
+          <h3>少しずつ、自分の踊りを育てていく。</h3>
+          <p>先生を見続けるより、自分の記憶を頼りに踊ると、振り付けを覚えやすいことに気づいた。</p>
+          <p>ジムでは「ダンスの先生をしているんですか？」と声をかけてもらった。とても嬉しかったし、もっと頑張ってみようと思えた。</p>
+          <p>憧れる先生の動きは、キレも可動域もすごい。自分との違いを見つけて、少しずつ近づいていきたい。振りを覚えるだけでなく、全力で踊っても間違えず、鏡で見てもかっこいい。そんな踊りを目指してみたい。</p>
+          <p class="note-highlight">人と比べて落ち込むのではなく、好きな踊りをお手本にして、昨日の自分より少し上手くなる。</p>
         </article>
       </section>
 
       <section class="note-category" id="freedom">
-        <h2 class="category-heading"><span>03 / DANCE &amp; FREEDOM</span>ダンスと自由</h2>
+        <h2 class="category-heading"><span>02 / DANCE &amp; FREEDOM</span>ダンスの自由</h2>
         <article class="note-card">
-          <div class="note-meta">2026.10.17 · MY DANCE PHILOSOPHY</div>
-          <h3>ダンスは、好きだから踊るものであってほしい。</h3>
-          <p>俺は誰からも強制されず、ただダンスが好きだから自分勝手に踊ってきた。</p>
-          <p>だからこそ、小さい頃から誰かの顔色を伺い、まるで習い事や学校の勉強のようにダンスを扱われ、それを強いられている子供を見ると不憫でならない。</p>
-          <p>小さい頃に、変なトラウマを植え付けないであげてほしい。ダンスなんてもんは、本人が好きなら勝手に踊るんだから。</p>
-          <p class="note-highlight">踊りたいという気持ちを、誰かの評価や強制で曇らせないでほしい。好きだから踊る。その自由を大切にしたい。</p>
+          <h3>好きだから踊る。それでいい。</h3>
+          <p>自分は、誰かに強制されたのではなく、ダンスが好きで踊ってきた。</p>
+          <p>だから、子どもにもダンスを無理にやらせず、好きな気持ちを大切にしてほしい。踊りたい子は、自分から自然に踊り出すはず。</p>
+          <p>上手さや評価よりも、まずは踊ることそのものを楽しめること。それが一番大切だと思う。</p>
+          <p class="note-highlight">ダンスは、やらされるものではなく、踊りたくて踊るものであってほしい。</p>
         </article>
       </section>
 
-      <section class="note-category" id="method">
-        <h2 class="category-heading"><span>04 / CLASS DESIGN</span>レッスンの仕組み</h2>
+      <section class="note-category" id="people">
+        <h2 class="category-heading"><span>03 / HUMAN CONNECTION</span>人とのつながり</h2>
         <article class="note-card">
-          <div class="note-meta">2026.10.17 · RITMOS / MEGA DANZ</div>
-          <h3>リトモスやメガダンスの「あのシステム」は本当に素晴らしい。</h3>
-          <p>振り付けを覚えながら、曲の流れや高揚感を途切れさせない。あのレッスンの進め方には、よくできた仕組みがあると思う。</p>
-          <ol class="method-list">
-            <li>振り入れの時間でも曲は止めない。</li>
-            <li>まず1×8カウントを振り入れし、それを曲に合わせて繰り返す。</li>
-            <li>次の1×8カウントを振り入れし、最初から続けて2×8カウント踊る。</li>
-            <li>振り入れの最初は足だけ。慣れてきたら手をつける。</li>
-            <li>最後に通しで踊り、飽きる間もなく次の曲へ進む。</li>
-          </ol>
-          <p>この仕組みを、ヒップホップやロックダンスなど、いわゆるストリートダンス系のレッスンに応用したら、すごく人気が出るんじゃないだろうか。</p>
-          <p class="note-highlight">曲を止めず、小さく覚えて、つなげて、最後は通して踊る。楽しさと習得を両立するレッスン設計として、ほかのジャンルにも可能性がありそう。</p>
+          <h3>名前を知ること、声をかけてもらうこと。</h3>
+          <p>以前は、人の名前はただの記号のようなものだと思っていて、自分から尋ねることもなかった。</p>
+          <p>でも、ジムで名前を聞かれるうちに、それは自分に興味を持ち、つながろうとしてくれているサインなのかもしれないと思った。そう考えると、素直に嬉しい。</p>
+          <p>ジムに通い始めた理由のひとつは、人と出会ったり話したりして、寂しさを少し埋めたかったから。ダンスを通じて、思いがけない会話や嬉しい言葉に出会えている。</p>
+          <p class="note-highlight">何気ない挨拶やひと言にも、人と人とのつながりが生まれるきっかけがある。</p>
+        </article>
+      </section>
+
+      <section class="note-category" id="style">
+        <h2 class="category-heading"><span>04 / FINDING MY PLACE</span>自分に合う場所</h2>
+        <article class="note-card">
+          <h3>ダンスに集中できる場所が、自分には合っている。</h3>
+          <p>リトモスやメガダンスのレッスンは、曲を止めずに短い振りから覚え、少しずつつなげていく。足から始めて、慣れたら手をつける。楽しさを保ちながら覚えられる、とてもよい仕組みだと思う。ほかのダンスジャンルにも活かせそう。</p>
+          <p>久しぶりにZUMBAへ行った。先生も生徒さんも素敵で、ダンスも楽しかった。ただ、人とペアになったり、交流したりする振り付けでは、なぜか心が疲れてしまう。昔、学校でグループを作る時に感じた不安を思い出すからかもしれない。</p>
+          <p>レッスン中は先生を見て、踊ることだけに集中できるジムのプログラムのほうが、今の自分には合っているようだ。</p>
+          <p class="note-highlight">今まで毎週ありがとう、ZUMBA。忘れた頃に、たまに行きます。自分が心地よく踊れる場所を大切にしたい。</p>
         </article>
       </section>
     </div>
   </section>
-
-      <section class="note-category" id="zumba">
-        <h2 class="category-heading"><span>06 / FINDING MY PLACE</span>ダンスとの距離感</h2>
-        <article class="note-card">
-          <div class="note-meta">2026.10.17 · ZUMBA</div>
-          <h3>今まで毎週ありがとう、ZUMBA。</h3>
-          <p>ジムに入会して以来、ずっとお休みしていたZUMBAに久々に行ってみた。そこで感じたこと。</p>
-          <p>先生は素晴らしい。生徒さんにも嫌な人はいない。ダンスも楽しい。だけど、やっぱり振り付けの中にご挨拶だったり、人と絡むようなシーンがあると、どうしても心のどこかが疲れてしまう。</p>
-          <p>あの疲れは一体なんなんだろう。小学校の頃、「仲いい人同士でペアを組んで座ってください」とか「5人1組で班を作ってください」と言われた時の、あの焦燥感。周囲に気を使われて輪に入れてもらった時の申し訳なさ。「自分たちの輪には入れない」という明確な意志を感じる、あの視線の逸らし方。</p>
-          <p>それは自分の被害妄想もあるだろう。そもそも自分が周囲に対して無愛想だから、周りから優しくされないんだよ、という自分自身へのツッコミもある。でも、ダンスにそういったややこしい感情を持ち込みたくない。</p>
-          <p>その意味でジムのダンスプログラムは、レッスン中は先生だけを見ていればいいから、すごくダンスに没頭できる。どうやら自分は、近所のジムのほうが性に合っているみたい。</p>
-          <p class="note-highlight">今まで毎週ありがとう、ZUMBA。忘れた頃に、たまに行きます。</p>
-        </article>
-      </section>
 
   <footer>
     <div class="footer-logo">KAZ DANCELIFE</div>
