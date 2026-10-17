@@ -3,116 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>KAZ DANCELIFE</title>
   <meta name="description" content="KAZ DANCELIFE - Dance. Live. Enjoy.">
-
   <link rel="stylesheet" href="style.css">
   <style>
-    .dance-note {
-      background: #111;
-      padding: 90px 20px;
-    }
-    .dance-note-inner {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .dance-note-date {
-      color: #888;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-    .dance-note h2 {
-      font-size: clamp(25px, 5vw, 36px);
-      letter-spacing: 1px;
-      margin-bottom: 28px;
-    }
-    .dance-note p {
-      color: #bbb;
-      margin-bottom: 18px;
-      line-height: 2;
-    }
-    .dance-note .note-point {
-      color: #fff;
-      border-left: 2px solid #777;
-      padding: 8px 0 8px 18px;
-      margin-top: 28px;
+    .notes { background:#101010; padding:80px 20px; }
+    .notes-inner { max-width:1000px; margin:0 auto; }
+    .notes-intro { color:#aaa; margin:-18px 0 32px; }
+    .category-nav { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 46px; }
+    .category-nav a { border:1px solid #444; border-radius:30px; padding:8px 15px; color:#ccc; font-size:13px; transition:.2s; }
+    .category-nav a:hover { background:#fff; color:#111; }
+    .note-category { margin:0 0 58px; scroll-margin-top:90px; }
+    .category-heading { font-size:23px; margin:0 0 22px; padding-bottom:12px; border-bottom:1px solid #333; }
+    .category-heading span { color:#777; font-size:11px; letter-spacing:3px; display:block; margin-bottom:5px; }
+    .note-card { background:#171717; border:1px solid #292929; border-radius:13px; padding:26px 28px; margin-bottom:16px; }
+    .note-meta { color:#888; font-size:11px; letter-spacing:2px; margin-bottom:9px; }
+    .note-card h3 { font-size:clamp(20px,3vw,26px); line-height:1.5; margin:0 0 18px; }
+    .note-card p { color:#bbb; line-height:2; margin:0 0 14px; }
+    .note-card p:last-child { margin-bottom:0; }
+    .note-highlight { color:#fff !important; border-left:2px solid #777; padding:7px 0 7px 16px; margin-top:20px !important; }
+    .method-list { color:#bbb; line-height:2; padding-left:1.3em; margin:12px 0 18px; }
+    .method-list li { padding-left:4px; margin-bottom:5px; }
+    @media(max-width:600px) {
+      .notes { padding:65px 18px; }
+      .note-card { padding:21px 19px; }
+      .category-heading { font-size:21px; }
     }
   </style>
 </head>
-
 <body>
-
-  <!-- HEADER -->
   <header>
     <div class="header-inner">
       <a href="#" class="logo">KAZ DANCELIFE</a>
+      <nav aria-label="カテゴリー">
+        <a href="#notes">NOTES</a>
+      </nav>
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
-
     <div class="hero-content">
-
-      <div class="hero-small">
-        WELCOME TO MY LIFE
-      </div>
-
-      <h1>
-        KAZ
-        <span>DANCELIFE</span>
-      </h1>
-
-      <div class="hero-title">
-        Dance. Live. Enjoy.
-      </div>
-
-      <div class="hero-jp">
-        踊って、遊んで、人生を楽しむ。
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- DANCE NOTE -->
-  <section class="dance-note">
-    <div class="dance-note-inner">
-      <div class="section-label">DANCE NOTE</div>
-      <div class="dance-note-date">2026.10.17</div>
-      <h2>先生を見すぎず、自分の記憶で踊ってみる。</h2>
-
-      <p>
-        リトモスやメガダンスのレッスンでは、これまでずっと先生の動きを見ながら踊っていた。
-        今日はちょっと試しに、先生のほうをあまり見ず、振り付けを思い出しながら踊ってみた。
-      </p>
-
-      <p>
-        すると、いつもより振り付けをよく覚えられたような感覚があった。
-        先生の動きを目で追うことから少し離れて、自分の頭の中にある振りを思い出すことに集中できたのかもしれない。
-      </p>
-
-      <p class="note-point">
-        いつも先生を見るだけでなく、ときには自分の記憶を頼りに踊ってみる。
-        振り付けを覚えるための、新しい小さな発見。
-      </p>
+      <div class="hero-small">WELCOME TO MY LIFE</div>
+      <h1>KAZ<span>DANCELIFE</span></h1>
+      <div class="hero-title">Dance. Live. Enjoy.</div>
+      <div class="hero-jp">踊って、遊んで、人生を楽しむ。</div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <section class="notes" id="notes">
+    <div class="notes-inner">
+      <div class="section-label">THOUGHTS &amp; DISCOVERIES</div>
+      <h2 class="section-title">DANCE LIFE NOTES</h2>
+      <p class="notes-intro">ダンスのこと、人とのつながり、日々の気づき。思ったことをカテゴリー別に。</p>
+
+      <nav class="category-nav" aria-label="ノートのカテゴリー">
+        <a href="#dance">ダンスの気づき</a>
+        <a href="#connection">人とのつながり</a>
+        <a href="#freedom">ダンスと自由</a>
+        <a href="#method">レッスンの仕組み</a>
+      </nav>
+
+      <section class="note-category" id="dance">
+        <h2 class="category-heading"><span>01 / DANCE DISCOVERIES</span>ダンスの気づき</h2>
+        <article class="note-card">
+          <div class="note-meta">2026.10.17 · RITMOS / MEGA DANZ</div>
+          <h3>先生を見すぎず、自分の記憶で踊ってみる。</h3>
+          <p>リトモスやメガダンスのレッスンでは、これまでずっと先生の動きを見ながら踊っていた。今日はちょっと試しに、先生のほうをあまり見ず、振り付けを思い出しながら踊ってみた。</p>
+          <p>すると、いつもより振り付けをよく覚えられたような感覚があった。先生の動きを目で追うことから少し離れて、自分の頭の中にある振りを思い出すことに集中できたのかもしれない。</p>
+          <p class="note-highlight">いつも先生を見るだけでなく、ときには自分の記憶を頼りに踊ってみる。振り付けを覚えるための、新しい小さな発見。</p>
+        </article>
+      </section>
+
+      <section class="note-category" id="connection">
+        <h2 class="category-heading"><span>02 / HUMAN CONNECTION</span>人とのつながり</h2>
+        <article class="note-card">
+          <div class="note-meta">2026.10.17 · GYM LIFE</div>
+          <h3>名前を尋ねるということ。</h3>
+          <p>今まで自分から誰かに名前を尋ねることが一切なかった。名前はその人の本質ではなく、記号というか、いわば「00185」のような、ただの番号にすぎないと思っていたから。</p>
+          <p>ジムに通い始めて1ヶ月。色んな場面で何度も名前を尋ねられ、少し困惑した。でも、これは多少なりとも自分という人間に興味を持ってくれて、会話をしたり、距離感を測ったり、関わり方を考えたいと思ってくれた証拠なのかなと思い、少し嬉しくなった。</p>
+          <p>まったく興味が持てず、ただそこにいるだけの風景のような存在に対して、名前を知りたいと思うことなんてないだろうし。</p>
+          <p class="note-highlight">名前そのものは記号でも、その名前を知ろうとする行為には、人とつながろうとする気持ちが表れているのかもしれない。</p>
+        </article>
+      </section>
+
+      <section class="note-category" id="freedom">
+        <h2 class="category-heading"><span>03 / DANCE &amp; FREEDOM</span>ダンスと自由</h2>
+        <article class="note-card">
+          <div class="note-meta">2026.10.17 · MY DANCE PHILOSOPHY</div>
+          <h3>ダンスは、好きだから踊るものであってほしい。</h3>
+          <p>俺は誰からも強制されず、ただダンスが好きだから自分勝手に踊ってきた。</p>
+          <p>だからこそ、小さい頃から誰かの顔色を伺い、まるで習い事や学校の勉強のようにダンスを扱われ、それを強いられている子供を見ると不憫でならない。</p>
+          <p>小さい頃に、変なトラウマを植え付けないであげてほしい。ダンスなんてもんは、本人が好きなら勝手に踊るんだから。</p>
+          <p class="note-highlight">踊りたいという気持ちを、誰かの評価や強制で曇らせないでほしい。好きだから踊る。その自由を大切にしたい。</p>
+        </article>
+      </section>
+
+      <section class="note-category" id="method">
+        <h2 class="category-heading"><span>04 / CLASS DESIGN</span>レッスンの仕組み</h2>
+        <article class="note-card">
+          <div class="note-meta">2026.10.17 · RITMOS / MEGA DANZ</div>
+          <h3>リトモスやメガダンスの「あのシステム」は本当に素晴らしい。</h3>
+          <p>振り付けを覚えながら、曲の流れや高揚感を途切れさせない。あのレッスンの進め方には、よくできた仕組みがあると思う。</p>
+          <ol class="method-list">
+            <li>振り入れの時間でも曲は止めない。</li>
+            <li>まず1×8カウントを振り入れし、それを曲に合わせて繰り返す。</li>
+            <li>次の1×8カウントを振り入れし、最初から続けて2×8カウント踊る。</li>
+            <li>振り入れの最初は足だけ。慣れてきたら手をつける。</li>
+            <li>最後に通しで踊り、飽きる間もなく次の曲へ進む。</li>
+          </ol>
+          <p>この仕組みを、ヒップホップやロックダンスなど、いわゆるストリートダンス系のレッスンに応用したら、すごく人気が出るんじゃないだろうか。</p>
+          <p class="note-highlight">曲を止めず、小さく覚えて、つなげて、最後は通して踊る。楽しさと習得を両立するレッスン設計として、ほかのジャンルにも可能性がありそう。</p>
+        </article>
+      </section>
+    </div>
+  </section>
+
   <footer>
-
-    <div class="footer-logo">
-      KAZ DANCELIFE
-    </div>
-
-    <p>
-      © 2026 KAZ DANCELIFE
-    </p>
-
+    <div class="footer-logo">KAZ DANCELIFE</div>
+    <p>© 2026 KAZ DANCELIFE</p>
   </footer>
-
 </body>
 </html>
