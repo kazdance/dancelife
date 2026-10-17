@@ -3,143 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KAZ DANCELIFE</title>
-  <meta name="description" content="KAZ DANCELIFE - Dance. Live. Enjoy.">
+  <title>DANCE LIFE NOTES | KAZ DANCELIFE</title>
+  <meta name="description" content="ダンスを通じた気づきや日々の記録。KAZ DANCELIFE">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .notes { background:#101010; padding:80px 20px; }
-    .notes-inner { max-width:1000px; margin:0 auto; }
-    .notes-intro { color:#aaa; margin:-18px 0 32px; line-height:1.9; }
-    .category-nav { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 46px; }
-    .category-nav a { border:1px solid #444; border-radius:30px; padding:8px 15px; color:#ccc; font-size:13px; transition:.2s; }
-    .category-nav a:hover { background:#fff; color:#111; }
-    .note-category { margin:0 0 52px; scroll-margin-top:90px; }
-    .category-heading { font-size:23px; margin:0 0 20px; padding-bottom:12px; border-bottom:1px solid #333; }
-    .category-heading span { color:#777; font-size:11px; letter-spacing:3px; display:block; margin-bottom:5px; }
-    .note-card { background:#171717; border:1px solid #292929; border-radius:13px; padding:26px 28px; }
-    .note-card h3 { font-size:clamp(20px,3vw,26px); line-height:1.5; margin:0 0 16px; }
-    .note-card p { color:#bbb; line-height:2; margin:0 0 13px; }
-    .note-card p:last-child { margin-bottom:0; }
-    .note-highlight { color:#fff !important; border-left:2px solid #777; padding:7px 0 7px 16px; margin-top:18px !important; }
-    @media(max-width:600px) {
-      .notes { padding:65px 18px; }
-      .note-card { padding:21px 19px; }
-      .category-heading { font-size:21px; }
-    }
-  </style>
+  <link rel="stylesheet" href="notes.css">
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <a href="#" class="logo">KAZ DANCELIFE</a>
-      <nav aria-label="カテゴリー">
-        <a href="#notes">NOTES</a>
-      </nav>
+      <a href="index.html" class="logo">KAZ DANCELIFE</a>
+      <nav aria-label="メインナビゲーション"><a href="index.html">HOME / NOTES</a></nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-small">WELCOME TO MY LIFE</div>
-      <h1>KAZ<span>DANCELIFE</span></h1>
-      <div class="hero-title">Dance. Live. Enjoy.</div>
-      <div class="hero-jp">踊って、遊んで、人生を楽しむ。</div>
-    </div>
+  <section class="notes-hero">
+    <div class="hero-small">THOUGHTS &amp; DISCOVERIES</div>
+    <h1>KAZ<span>DANCELIFE</span></h1>
+    <p class="hero-title">Dance. Live. Enjoy.</p>
+    <p class="hero-jp">踊って、遊んで、人生を楽しむ。</p>
   </section>
-
-  <section class="notes" id="notes">
-    <div class="notes-inner">
-      <div class="section-label">THOUGHTS &amp; DISCOVERIES</div>
-      <h2 class="section-title">DANCE LIFE NOTES</h2>
-      <p class="notes-intro">これまでの気づきを、4つのテーマにまとめました。</p>
-
-      <nav class="category-nav" aria-label="ノートのカテゴリー">
-        <a href="#growth">上達と発見</a>
-        <a href="#freedom">ダンスの自由</a>
-        <a href="#people">人とのつながり</a>
-        <a href="#style">自分に合う場所</a>
-      </nav>
-
-      <section class="note-category" id="growth">
-        <h2 class="category-heading"><span>01 / LEARNING &amp; GROWTH</span>上達と発見</h2>
-        <article class="note-card">
-          <h3>少しずつ、自分の踊りを育てていく。</h3>
-          <p>先生を見続けるより、自分の記憶を頼りに踊ると、振り付けを覚えやすいことに気づいた。</p>
-          <p>ジムでは「ダンスの先生をしているんですか？」と声をかけてもらった。とても嬉しかったし、もっと頑張ってみようと思えた。</p>
-          <p>憧れる先生の動きは、キレも可動域もすごい。自分との違いを見つけて、少しずつ近づいていきたい。振りを覚えるだけでなく、全力で踊っても間違えず、鏡で見てもかっこいい。そんな踊りを目指してみたい。</p>
-          <p class="note-highlight">人と比べて落ち込むのではなく、好きな踊りをお手本にして、昨日の自分より少し上手くなる。</p>
-        </article>
-        <article class="note-card" style="margin-top:18px">
-          <h3>何歳からでも、ダンスの楽しさは戻ってくる。</h3>
-          <p>30歳の頃は「もうダンスをする年齢じゃない」と思い、サークルを辞めた。それが42歳でZUMBAを始めて楽しさを思い出し、43歳ではいろいろなサークルへ、44歳ではジムの多彩なダンスプログラムへと世界が広がった。</p>
-          <p>知らないだけで、ダンス以外にも、食わず嫌いしている楽しいことがまだたくさんあるのかもしれない。</p>
-          <p class="note-highlight">年齢を理由に決めつけず、まず試してみる。新しい楽しみは、思いがけないところにある。</p>
-        </article>
-      </section>
-
-      <section class="note-category" id="freedom">
-        <h2 class="category-heading"><span>02 / DANCE &amp; FREEDOM</span>ダンスの自由</h2>
-        <article class="note-card">
-          <h3>好きだから踊る。それでいい。</h3>
-          <p>自分は、誰かに強制されたのではなく、ダンスが好きで踊ってきた。</p>
-          <p>だから、子どもにもダンスを無理にやらせず、好きな気持ちを大切にしてほしい。踊りたい子は、自分から自然に踊り出すはず。</p>
-          <p>上手さや評価よりも、まずは踊ることそのものを楽しめること。それが一番大切だと思う。</p>
-          <p class="note-highlight">ダンスは、やらされるものではなく、踊りたくて踊るものであってほしい。</p>
-        </article>
-        <article class="note-card" style="margin-top:18px">
-          <h3>鏡の中の自分を、ありのままに見る。</h3>
-          <p>とても上手な先生や参加者と、前も横も鏡張りのスタジオで踊ると、自分の踊りを思い込みで見ていたことに気づく。かっこよく踊れていると思っていた姿は、こうありたいという理想が作ったイメージだったのかもしれない。</p>
-          <p>上手な参加者も多く、特にダンス経験のある女性が目立つように感じた。いろいろな経験を持つ人たちと同じ空間で踊ることは、大きな刺激になる。</p>
-          <p class="note-highlight">自分の現在地を知ることも、上達への大切な一歩。</p>
-        </article>
-      </section>
-
-      <section class="note-category" id="people">
-        <h2 class="category-heading"><span>03 / HUMAN CONNECTION</span>人とのつながり</h2>
-        <article class="note-card">
-          <h3>名前を知ること、声をかけてもらうこと。</h3>
-          <p>以前は、人の名前はただの記号のようなものだと思っていて、自分から尋ねることもなかった。</p>
-          <p>でも、ジムで名前を聞かれるうちに、それは自分に興味を持ち、つながろうとしてくれているサインなのかもしれないと思った。そう考えると、素直に嬉しい。</p>
-          <p>ジムに通い始めた理由のひとつは、人と出会ったり話したりして、寂しさを少し埋めたかったから。ダンスを通じて、思いがけない会話や嬉しい言葉に出会えている。</p>
-          <p class="note-highlight">何気ない挨拶やひと言にも、人と人とのつながりが生まれるきっかけがある。</p>
-        </article>
-        <article class="note-card" style="margin-top:18px">
-          <h3>自然な距離感から、つながりが生まれる。</h3>
-          <p>スタジオの後ろの端に一人で立ち、場所を変えず、周りと無理に交流せずに踊る。それでも、レッスン後に声をかけてもらったり、少しずつ顔見知りができたりする。</p>
-          <p>同じものが好きで、何度も顔を合わせていれば、相手の踊りに惹かれたり、自然に会話が生まれたりする。人との距離は、無理に縮めるのではなく、互いのタイミングで近づいていくものなのかもしれない。</p>
-          <p class="note-highlight">自分らしくその場にいるだけで、つながりが育つこともある。</p>
-        </article>
-      </section>
-
-      <section class="note-category" id="style">
-        <h2 class="category-heading"><span>04 / FINDING MY PLACE</span>自分に合う場所</h2>
-        <article class="note-card">
-          <h3>ダンスに集中できる場所が、自分には合っている。</h3>
-          <p>リトモスやメガダンスのレッスンは、曲を止めずに短い振りから覚え、少しずつつなげていく。足から始めて、慣れたら手をつける。楽しさを保ちながら覚えられる、とてもよい仕組みだと思う。ほかのダンスジャンルにも活かせそう。</p>
-          <p>久しぶりにZUMBAへ行った。先生も生徒さんも素敵で、ダンスも楽しかった。ただ、人とペアになったり、交流したりする振り付けでは、なぜか心が疲れてしまう。昔、学校でグループを作る時に感じた不安を思い出すからかもしれない。</p>
-          <p>レッスン中は先生を見て、踊ることだけに集中できるジムのプログラムのほうが、今の自分には合っているようだ。</p>
-          <p class="note-highlight">今まで毎週ありがとう、ZUMBA。忘れた頃に、たまに行きます。自分が心地よく踊れる場所を大切にしたい。</p>
-        </article>
-        <article class="note-card" style="margin-top:18px">
-          <h3>ダンスプログラムにも、それぞれの個性がある。</h3>
-          <p>リトモス、メガダンス、ボディジャム、レズミルズダンス、ヒップホップ。ジムの中でも、プログラムごとに音楽や振り付け、レッスンの雰囲気が違う。</p>
-          <p>本部が曲と振り付けを用意し、各地のインストラクターが教える仕組みはよくできている。同じプログラムでも、先生によって教え方や雰囲気が変わるのも面白い。一方、ヒップホップは先生個人の色が強く、その人の力量や個性が大きく表れる。</p>
-          <p class="note-highlight">同じダンスでも、仕組みや先生が違えば、楽しみ方もまったく違う。</p>
-        </article>
-        <article class="note-card" style="margin-top:18px">
-          <h3>好きなところも、苦手なところもある。</h3>
-          <p>ZUMBAで自然に笑顔になったり、周りと目を合わせたりするのは好き。でも、振り付けとして挨拶をしたり、隣の人と手をつないだりすることを求められると、気持ちが引いてしまう。</p>
-          <p>手をつなぐことが苦手な理由は人それぞれだと思う。相手への気遣いや距離感の問題もあれば、ふざけた雰囲気の振り付けより、優雅さやグルーヴのあるかっこいい踊りを楽しみたいという気持ちもある。</p>
-          <p>好きか嫌いかの二択ではなく、好きな部分も苦手な部分もある。楽しいところを大切にして参加してきたけれど、今回は少し疲れてしまった。それだけのこと。</p>
-          <p class="note-highlight">人の気持ちは0か1ではない。好きなところも、苦手なところも、そのまま認めていい。</p>
-        </article>
-      </section>
+  <main class="notes-main">
+    <div class="section-label">MY JOURNAL</div>
+    <h2 class="section-title">DANCE LIFE NOTES</h2>
+    <p class="notes-intro">ダンスを楽しみながら見つけた、小さな発見や気持ちの記録。<br>テーマごとにまとめています。</p>
+    <div class="category-grid">
+      <a class="category-card" href="growth.html"><span class="category-number">01 / LEARNING &amp; GROWTH</span><span class="category-icon">↗</span><h2>上達と発見</h2><p>自分の踊りを知り、少しずつ成長していく。</p><span class="read-more">READ NOTES →</span></a>
+      <a class="category-card" href="freedom.html"><span class="category-number">02 / DANCE &amp; FREEDOM</span><span class="category-icon">♡</span><h2>ダンスの自由</h2><p>好きだから踊る。年齢にとらわれず楽しむ。</p><span class="read-more">READ NOTES →</span></a>
+      <a class="category-card" href="people.html"><span class="category-number">03 / HUMAN CONNECTION</span><span class="category-icon">◎</span><h2>人とのつながり</h2><p>無理をせず、自然な距離感でつながる。</p><span class="read-more">READ NOTES →</span></a>
+      <a class="category-card" href="style.html"><span class="category-number">04 / FINDING MY PLACE</span><span class="category-icon">♫</span><h2>自分に合う場所</h2><p>いろいろな踊り方や場所を試し、自分らしさを見つける。</p><span class="read-more">READ NOTES →</span></a>
     </div>
-  </section>
+    <p class="closing-line">自分らしく踊れる場所を探しながら、これからも。</p>
+  </main>
 
-  <footer>
-    <div class="footer-logo">KAZ DANCELIFE</div>
-    <p>© 2026 KAZ DANCELIFE</p>
-  </footer>
+  <footer><div class="footer-logo">KAZ DANCELIFE</div><p>© 2026 KAZ DANCELIFE</p></footer>
 </body>
 </html>
